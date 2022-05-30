@@ -4,6 +4,7 @@ import Cards from './Cards';
 import Home from './routes/Home';
 import About from './routes/About';
 import {getData} from './data';
+import Click from './routes/Games/Click';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ const Navigation = ()=>{
       <Route path='/games' element={<Cards games={data["gamesData"]}/>} />
       <Route path='/projects' element={<Cards games={data["projData"]}/>} />
       <Route path='/about' element={<About/>} />
+      <Route path='/games/click' element={<Click/>} />
       <Route path='*' element={<Navigate to='/'/>} />
     </Routes>
   )
