@@ -1,6 +1,8 @@
-function Games() {
+import Cards from '../Cards';
+
+function Games(props) {
     return (
-        <div>Games</div>
+        <Cards arr={props.data} category="games" />
     );
 }
 

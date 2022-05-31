@@ -30,7 +30,7 @@ function Click() {
                     </div>            
                 </div>
                 <div className="cpc"><div className="rate"></div></div>
-                <div className="playagain" onClick={go}><div className="" style={{color:'black'}}>Play Again<br/><i className="material-icons">replay</i></div></div>
+                <div className="playagain" onClick={go}><div>Play Again<br/><i className="material-icons">replay</i></div></div>
             </div>
 
             <div><button className="btn-clicky" onClick={incScore}>Click Me</button></div>
@@ -40,7 +40,7 @@ function Click() {
 }
 
 function click_init() {
-    $(document).ready(function() {
+    $(function() {
         for(var i=0; i<=12; i++) {
             $("#hour"+i).css("transform", " rotate("+30*i+"deg) translate(10.5vw)");
         }
@@ -52,7 +52,7 @@ function click_init() {
         Frames = -1;
         setTime();
 
-        setInterval(draw, 1000/30);
+        setInterval(draw, 1000/60);
     });
 }
 

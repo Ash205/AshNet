@@ -1,6 +1,8 @@
-function Projects() {
+import Cards from '../Cards';
+
+function Projects(props) {
     return (
-        <div>Projects</div>
+        <Cards arr={props.data} category="projects" />
     );
 }
 

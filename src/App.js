@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Nav from './Nav';
-import Cards from './Cards';
+import Games from './routes/Games.js';
+import Projects from "./routes/Projects.js";
 import Home from './routes/Home';
 import About from './routes/About';
 import {getData} from './data';
@@ -19,12 +20,12 @@ const Navigation = ()=>{
   let data = getData();
   return (
     <Routes>
-      <Route path='/' element={<Home/>} />
-      <Route path='/games' element={<Cards games={data["gamesData"]}/>} />
-      <Route path='/projects' element={<Cards games={data["projData"]}/>} />
-      <Route path='/about' element={<About/>} />
-      <Route path='/games/click' element={<Click/>} />
-      <Route path='*' element={<Navigate to='/'/>} />
+      <Route key='1' path='/' element={<Home/>} />
+      <Route key='2' path='/games' element={<Games data={data["gamesData"]}/>} />
+      <Route key='3' path='/projects' element={<Projects data={data["projData"]}/>} />
+      <Route key='4' path='/about' element={<About/>} />
+      <Route key='5' path='/games/click' element={<Click/>} />
+      <Route key='6' path='*' element={<Navigate to='/'/>} />
     </Routes>
   )
 }
